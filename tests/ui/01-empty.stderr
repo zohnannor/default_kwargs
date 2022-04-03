@@ -1,0 +1,7 @@
+error: unexpected end of input, expected `fn`
+ --> tests/ui/01-empty.rs:5:1
+  |
+5 | default_args! {}
+  | ^^^^^^^^^^^^^^^^
+  |
+  = note: this error originates in the macro `default_args` (in Nightly builds, run with -Z macro-backtrace for more info)

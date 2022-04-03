@@ -1,0 +1,23 @@
+[package]
+name = "default_kwargs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[[test]]
+name = "tests"
+path = "tests/trybuild.rs"
+
+[dev-dependencies]
+trybuild = { version = "1.0.58", features = ["diff"] }
+
+[dependencies]
+proc-macro2 = "1.0.36"
+quote = "1.0.17"
+trybuild = "1.0.58"
+
+[dependencies.syn]
+version = "1.0.90"
+features = ["full", "extra-traits", "parsing"]

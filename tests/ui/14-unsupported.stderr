@@ -1,0 +1,13 @@
+error: variadics are not supported by `default_args` macro
+ --> tests/ui/14-unsupported.rs:8:46
+  |
+8 |     unsafe extern "C" fn variadic_kw(a: i32, ...) {}
+  |                                              ^^^
+
+error[E0658]: C-variadic functions are unstable
+ --> tests/ui/14-unsupported.rs:5:1
+  |
+5 | unsafe extern "C" fn variadic_fn(a: i32, ...) {}
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: see issue #44930 <https://github.com/rust-lang/rust/issues/44930> for more information

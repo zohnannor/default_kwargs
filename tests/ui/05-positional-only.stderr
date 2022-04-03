@@ -1,0 +1,30 @@
+error[E0061]: this function takes 3 arguments but 1 argument was supplied
+  --> tests/ui/05-positional-only.rs:12:34
+   |
+12 |     let (r, s) = keyword_args! { thing(y = 666) };
+   |                  ----------------^^^^^-----------
+   |                  |               |
+   |                  |               expected 3 arguments
+   |                  supplied 1 argument
+   |
+note: function defined here
+  --> tests/ui/05-positional-only.rs:6:8
+   |
+5  |   default_args! {
+   |  _-
+   | |_|
+   | |
+6  | |     fn thing(x: i32, y: i32) -> (i32, i32) {
+   | |        ^^^^^ ------
+7  | |         (x, y)
+8  | |     }
+9  | | }
+   | |_-
+   | |_|
+   |
+
+error[E0560]: struct `ThingArgs` has no field named `y`
+  --> tests/ui/05-positional-only.rs:12:40
+   |
+12 |     let (r, s) = keyword_args! { thing(y = 666) };
+   |                                        ^ `ThingArgs` does not have this field

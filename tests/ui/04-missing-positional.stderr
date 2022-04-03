@@ -1,0 +1,19 @@
+error[E0061]: this function takes 2 arguments but 1 argument was supplied
+  --> tests/ui/04-missing-positional.rs:12:34
+   |
+12 |     let (r, s) = keyword_args! { thing(y = 666) };
+   |                  ----------------^^^^^-----------
+   |                  |               |
+   |                  |               expected 2 arguments
+   |                  supplied 1 argument
+   |
+note: function defined here
+  --> tests/ui/04-missing-positional.rs:6:8
+   |
+5  | / default_args! {
+6  | |     fn thing(x: i32, y: i32 = 69) -> (i32, i32) {
+   | |        ^^^^^ ------
+7  | |         (x, y)
+8  | |     }
+9  | | }
+   | |_-

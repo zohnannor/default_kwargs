@@ -1,0 +1,5 @@
+error: expected `,`
+ --> tests/ui/10-kwarg-pattern.rs:9:44
+  |
+9 |     fn thing(x: i32, MyStruct(y): MyStruct = MyStruct(69)) -> (i32, i32) {
+  |                                            ^
