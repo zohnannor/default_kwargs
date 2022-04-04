@@ -72,7 +72,7 @@ use quote::quote;
 /// }
 /// ```
 ///
-/// See [module-level docs](crate) for more info.
+/// See [crate-level docs](crate) for more info.
 #[proc_macro]
 pub fn default_args(item: TokenStream) -> TokenStream {
     let item = syn::parse_macro_input!(item as default_args::DefaultFn);
@@ -117,7 +117,7 @@ pub fn default_args(item: TokenStream) -> TokenStream {
 /// );
 /// ```
 ///
-/// See [module-level docs](crate) for more info.
+/// See [crate-level docs](crate) for more info.
 #[proc_macro]
 pub fn keyword_args(item: TokenStream) -> TokenStream {
     let item = syn::parse_macro_input!(item as keyword_args::KeywordFn);
