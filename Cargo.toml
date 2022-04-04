@@ -1,7 +1,19 @@
 [package]
 name = "default_kwargs"
+description = "The macro wich enables you to use default and keyword arguments in Rust"
 version = "0.1.0"
+authors = ["zohnannor <zohnannor@gmail.com>"]
+keywords = ["keyword", "default", "kwargs"]
+categories = ["rust-patterns"]
+repository = "https://github.com/zohnannor/default_kwargs"
+exclude = ["/.github/"]
+readme = "README.md"
+documentation = "https://docs.rs/default_kwargs"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
 
 [lib]
 proc-macro = true
