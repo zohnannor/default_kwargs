@@ -1,6 +1,6 @@
 [package]
 name = "default_kwargs"
-description = "The macro wich enables you to use default and keyword arguments in Rust"
+description = "The macro which enables you to use default and keyword arguments in Rust"
 version = "0.1.0"
 authors = ["zohnannor <zohnannor@gmail.com>"]
 keywords = ["keyword", "default", "kwargs"]
