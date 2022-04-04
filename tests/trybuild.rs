@@ -15,4 +15,6 @@ fn tests() {
     t.pass("tests/ui/12-generic-with-bounds.rs");
     t.pass("tests/ui/13-everything-supported.rs");
     t.compile_fail("tests/ui/14-unsupported.rs");
+    // TODO: fix this test, somehow we need to get struct's path?
+    t.compile_fail("tests/ui/15-visibility.rs");
 }

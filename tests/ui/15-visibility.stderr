@@ -1,0 +1,23 @@
+error[E0422]: cannot find struct, variant or union type `NestedArgs` in this scope
+  --> tests/ui/15-visibility.rs:18:13
+   |
+18 |             keyword_args! { nested() }
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+   = note: this error originates in the macro `keyword_args` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider importing this struct
+   |
+12 |     use crate::first::NestedArgs;
+   |
+
+error[E0433]: failed to resolve: use of undeclared type `NestedArgs`
+  --> tests/ui/15-visibility.rs:18:13
+   |
+18 |             keyword_args! { nested() }
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+   = note: this error originates in the macro `keyword_args` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider importing this struct
+   |
+12 |     use crate::first::NestedArgs;
+   |

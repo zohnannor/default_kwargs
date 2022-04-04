@@ -72,6 +72,10 @@ impl ToTokens for DefaultFn {
                 }
             });
 
+        // the struct's (and it's field's) visibility is taken from function's
+        // so that you can use generated struct where you can use the function.
+        let vis = &self.vis;
+
         let struct_name =
             quote::format_ident!("{}Args", capitalize(&mut self.sig.ident.to_string()),);
 
@@ -89,13 +93,12 @@ impl ToTokens for DefaultFn {
             }
         });
         let where_clause = &self.sig.generics.where_clause;
-
         let generics_decl = generics_of_default_args.clone();
         let strukt = quote! {
             #[allow(unused)]
             // #[allow(non_camel_case_types)]
-            struct #struct_name <#(#generics_decl),*> #where_clause {
-                #(#typed_fields),*
+            #vis struct #struct_name <#(#generics_decl),*> #where_clause {
+                #vis #(#typed_fields),*
             }
         };
         tokens.extend([strukt]);
